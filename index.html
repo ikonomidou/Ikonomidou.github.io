@@ -9,70 +9,89 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.0/featherlight.min.css" integrity="sha256-Bl4rr1AwUjcb8VvRrdHXqJvRRCyF7oHsgUl74ELjr7k=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.0/featherlight.gallery.min.css" integrity="sha256-MRRZ47bY1XWm0OAy01C3rMZCigQeeKoCxb2oExljmXs=" crossorigin="anonymous" />
     <style>
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
+      body {
+        font-family: 'Noto Sans', sans-serif;
+        position: relative;
+      }
+      body > .container {
+        padding-top:70px;
+        padding-bottom: 60px;
+      }
+      .row.match-my-cols {
+        overflow: hidden;
+      }
+
+      .row.match-my-cols [class*="col-"]{
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+      }
+      .footer > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .footer > .container p {
+        margin: 20px 0;
+      }
     </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar-wrap" data-offset="140">
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbar-wrap">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Eleni Ikonomidou</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#routes-of-escape">Routes of Escape</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">Biographie</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6" style="letter-spacing: 3px">
-          <h1>ROUTES OF ESCAPE
-            <br />
-            <small style="letter-spacing: 4px">ELENI IKONOMIDOU</small>
-          </h1>
-        </div>
-        <div class="col-md-6" style="text-align: right">
-          <h1><span style="letter-spacing: 5px">ΔΡΟΜΟΙ ΔΙΑΦΥΓΗΣ</span>
-            <br />
-            <small style="letter-spacing: 5px; padding-right:10px">ΕΛΕΝΗ ΟΙΚΟΝΟΜΙΔΟΥ</small>
-          </h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-3" style="margin-top: 40px">
-          <p>" Routes of escape " is a series of sixteen oils on canvas (50 x 50 cm), seven mixed media works of various dimensions and two zinc etchings.
-          <div style="margin-top: 120px"></div>
+      <div class="row match-my-cols" id="routes-of-escape">
+        <div class="col-md-3">
+          <h1 style="letter-spacing: 0.05em">ROUTES OF ESCAPE</h1>
           <p>
           To walk in life, as in a forest, getting lost; striding along the same tracks every day. To become tree a thousand times over, reaching for the sky, remaining rooted in the ground. The roots, support and inevitable organic trap. To blend with the leaves, the branches, the insects, the birds, rummaging through the soil, charting the path that will lead to the land of our dreams.
           </p>
         </div>
         <div class="col-md-6">
-          <img src="artwork/main.JPG" width=500/>
+          <img src="artwork/main.JPG" class="img-responsive"/>
+          <div class="row">
+            <div class="col-md-6">
+                <p>" Routes of escape " is a series of sixteen oils on canvas (50 x 50 cm), seven mixed media works of various dimensions and two zinc etchings.
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Oι " Δρόμοι Διαφυγής " είναι ένα σύνολο από δεκαέξι λάδια σε καμβά (50 x 50 εκ), επτά χαρακτικά σε λινόλαιο διαφόρων μεγεθών, τυπωμένα σε καμβά και δύο χαρακτικά σε ψευδάργυρο.
+                    </p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3" style="margin-top: 35px">
-          <p>
-          Oι " Δρόμοι Διαφυγής " είναι ένα σύνολο από δεκαέξι λάδια σε καμβά (50 x 50 εκ), επτά χαρακτικά σε λινόλαιο διαφόρων μεγεθών, τυπωμένα σε καμβά και δύο χαρακτικά σε ψευδάργυρο.
-          </p>
-          <div style="margin-top: 80px"></div>
-          <p>
-          Να περπατἀς στη ζωἠ, ὀπως στο δἀσος, να χἀνεσαι… να ακολουθεἰς κἀθε μἐρα τις ἰδιες διαδρομἐς. Να παἰρνεις τη μορφἠ του δἐντρου χἰλιες φορἐς, να ανεβαἰνεις στον ουρανὀ με τα πὀδια σου να ριζὠνουν στη γη. Οι ρἰζες, θεμἐλιο και αναπὀφευκτη οργανικἠ παγἰδα. Να σμἰγεις με τα φὐλλα, τα κλαδιἀ, τα ἐντομα, τα πουλιἀ, χαρἀζοντας το μονοπἀτι που θα σε οδηγἠσει στη χὠρα των ονεἰρων.
-          </p>
+        <div class="col-md-3">
+          <span style="text-align: right; letter-spacing: 0.2em"><h1>ΔΡΟΜΟΙ ΔΙΑΦΥΓΗΣ</h1></span>
+          <p>Να περπατἀς στη ζωἠ, ὀπως στο δἀσος, να χἀνεσαι… να ακολουθεἰς κἀθε μἐρα τις ἰδιες διαδρομἐς. Να παἰρνεις τη μορφἠ του δἐντρου χἰλιες φορἐς, να ανεβαἰνεις στον ουρανὀ με τα πὀδια σου να ριζὠνουν στη γη. Οι ρἰζες, θεμἐλιο και αναπὀφευκτη οργανικἠ παγἰδα. Να σμἰγεις με τα φὐλλα, τα κλαδιἀ, τα ἐντομα, τα πουλιἀ, χαρἀζοντας το μονοπἀτι που θα σε οδηγἠσει στη χὠρα των ονεἰρων.</p>
         </div>
       </div>
-
-      <div class="row" style="margin-top: 75px"></div>
+      <hr />
       <div class="row">
-        <div class="col-md-6 col-md-offset-3" style="padding-left:2.6em;">
-          <p style="font-size: 1.2em;">
-          GALERIE THEOREMA
-          39, rue Berckmans
-          B-1060 Bruxelles<br />
-          <span style="padding-left: 8.5em;">
-          2 &mdash; 20 Février 2017
-          </span>
-          </p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6"></div>
-        <div class="col-md-6"></div>
-      </div>
-
-      <div class="row" style="margin-top: 75px; margin-bottom: 75px">
         <div class="col-md-12">
         <section data-featherlight-gallery data-featherlight-filter="a">
           <a href="artwork/full/1.JPG"><img src="artwork/thumb/1.JPG" class="img-thumbnail"></a>
@@ -98,12 +117,77 @@ body {
         </section>
         </div>
       </div>
+      <hr />
 
-      <footer class="footer">
-        <p>&copy; 2016-2017 Eleni Ikonomidou.</p>
-      </footer>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Part II</h2>
+          <p>The fusion of man and nature is expressed in a series of etchings, inspired by the human anatomy and the botanical world.</p></div>
+        <div class="col-md-6">
+          <h2>Partie II</h2>
+          <p>La fusion de l'homme et de la nature est exprimée par une série de gravures (eau-forte), inspirées par l'anatomie et la botanique.</p></div>
+      </div>
+      <hr />
+
+      <div class="row" id="about">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            <h2>Biogaphie</h2>
+            <p>Eleni lkonomidou  est née à Istanbul et elle a grandi à Athènes. Elle vit et travaille à Bruxelles depuis 1992.
+            Études de langues en Grèce, Italie et Pays-Bas.
+            Diplômée en littérature française contemporaine de l'Université de Nimègue, Pays-Bas en 1992.</p>
+            <h3>Formation artistique</h3>
+            <ul>
+            <li>Académie des beaux-arts de Watermael-Boitsfort.</li>
+            <li>Atelier  de peinture de Christos Vouyouklis. Diplôme en 2010</li>
+            <li>Atelier  de gravure de Kikie Crèvecoeur. Diplôme en 2018</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+          <div class="col-md-5 col-md-offset-1">
+            <h3>Expositions collectives</h3>
+            <ul class="list-unstyled">
+                <li><b>2006</b> &mdash; Galerie Fayla, Bruxelles</li>
+                <li><b>2007</b> &mdash; Galerie de l'Ancienne Poste, Besançon, France</li>
+                <li><b>2009</b> &mdash; Portes ouvertes des artistes de Woluwe-St-Lambert</li>
+                <li><b>2010</b> &mdash; Studio DVO, Bruxelles, Galerie Fayla, Bruxelles</li>
+                <li><b>2011</b> &mdash; Centre Culturel de Jesus-Eik, Bruxelles</li>
+                <li><b>2012</b> &mdash; Portes ouvertes des artistes de Woluwe-St-Lambert</li>
+                <li><b>2016</b> &mdash; Les éditions Tandem, le centre de la gravure et de l'image imprimée, Louviere</li>
+                <li><b>2016</b> &mdash; Centre Culturel d'Eghezée</li>
+            </ul>
+            <h3>Expositions personnelles</h3>
+            <ul class="list-unstyled">
+              <li><b>2017</b> &mdash; Galerie THEOREMA Bruxelles</li>
+            </ul>
+            <h3>Editions 1 Livres d'artistes</h3>
+            <ul class="list-unstyled">
+                <li><b>2013</b> &mdash; Narcose, éditions Tandem</li>
+                <li><b>2016</b> &mdash; Perséphone, éditions Tandem</li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+              <h3>Projets internationaux</h3>
+              <ul class="list-unstyled">
+                <li><b>2010</b> &mdash; La Miniature dans le cadre de la 2011 Sème Biennale Internationale de Gravure Contemporaine. Le projet a été exposé à l'Académie de Liège, à l'Académie de Watermael-Boitsfort, en Asturie, en Serbie, au Québec,au Brésil.</li>
+                <li><b>2014</b> &mdash; NEPOWATER, Patmos, Grèce. Les comptines dans le monde, dans le cadre  de la biennale de la gravure à Liège.</li>
+                <li><b>2015</b> &mdash; La Comptine dans le cadre  de la Biennale de l'Estampe à l'Académie de Liège. Le projet a été exposé au Québec, en Serbie, au Mexique, en Espagne.</li>
+                <li><b>2016</b> &mdash; Urgence Grèce, ULB Salle Allende, Bruxelles</li>
+                <li><b>2016</b> &mdash; Ferme ta boîte, dans le cadre  de la biennale de l'Estampe du Sud, Uzès, France</li>
+              </ul>
+            </div>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2016-2018 Eleni Ikonomidou.</p>
+      </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.3/jquery.detect_swipe.min.js" integrity="sha256-WryvPraeW4IEwFblcwDMs1tpmf1KsIHmeBQLEwQ9t3U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.0/featherlight.min.js" integrity="sha256-zTDNEf7J+bPdCSndhy8DppFjxfRGG5BFJW5obpl0XQs=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.0/featherlight.gallery.min.js" integrity="sha256-heoFw3NdMpnVjfxLLCOuq0rFgffVe3GgadJE/A98tOo=" crossorigin="anonymous"></script>
